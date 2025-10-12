@@ -15,3 +15,5 @@
 4、后端接口8000，前端8080，前后都启动后浏览器输入`http://localhost:8080`回车即可。
 
 ![page1.jpg](page1.jpg)
+
+![page2.jpg](page2.jpg)
