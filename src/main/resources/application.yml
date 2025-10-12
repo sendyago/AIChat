@@ -1,0 +1,25 @@
+server:
+  port: 8000
+  servlet:
+    session:
+      timeout: 0
+
+spring:
+  application:
+    name: AIChat
+  datasource:
+    url: jdbc:mysql://localhost:3306/chat?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Root1231
+
+mybatis-plus:
+  mapperLocations: classpath:/mapper/**/*.xml
+
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          autoconfigure:
+            logging: info
