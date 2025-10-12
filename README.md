@@ -13,3 +13,5 @@
 3、前端依赖Nodejs环境，较新版即可，有了Node环境后，在前端目录`chatweb`中先执行`npm install`安装依赖，然后再执行`npm run serve`启动前端项目。
 
 4、后端接口8000，前端8080，前后都启动后浏览器输入`http://localhost:8080`回车即可。
+
+![page1.jpg](page1.jpg)
