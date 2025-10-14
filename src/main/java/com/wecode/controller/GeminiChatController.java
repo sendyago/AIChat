@@ -5,7 +5,6 @@ import com.wecode.base.ResultInfo;
 import com.wecode.handler.GeminiChatHandler;
 import com.wecode.record.vo.ChatVo;
 import com.wecode.service.ChatInfoService;
-import com.wecode.service.ChatTitleService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,8 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Objects;
 
 /**
  * Google Gemini API调用接口

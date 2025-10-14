@@ -30,8 +30,6 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 
-import static java.lang.ScopedValue.where;
-
 /**
  * Gemini Chat 业务处理
  * @author wecode
