@@ -57,10 +57,14 @@
                                 @mouseleave="hideThisOper(index)"
                             >
                                 <div class="f-l chat-title-div" :title="title.titleName"
-                                    @click="getChatInfo(title.chatId, index, title.modelName)">
-                                    <span v-if="title.showName">{{ title.titleName }}</span>
+                                    @click="getChatInfo(title.chatId, index, title.modelName)"
+                                    v-if="title.showName">
+                                    <span>{{ title.titleName }}</span>
                                 </div>
-                                <span v-if="!title.showName"><input type="text" v-model="title.titleName" class="chat-title-input"/></span>
+                                <div class="f-l chat-title-div" 
+                                     v-if="!title.showName">
+                                    <span><input type="text" v-model="title.titleName" class="chat-title-input"/></span>
+                                </div>
                                 <div v-show="title.showOper" class="f-r chat-oper" @click="delTitle(title.chatId)"><span class="icon-trash model-type-btn-2"></span></div>
                                 <div v-show="title.showOper" v-if="title.showName" class="f-r chat-oper" @click="editTitle(title.chatId, index)"><span class="icon-edit model-type-btn-2"></span></div>
                                 <div v-show="title.showOper" v-if="!title.showName" class="f-r chat-oper" @click="saveChatTitle(title.chatId, index)"><span class="icon-ok-2 model-type-btn-2"></span></div>
@@ -176,7 +180,7 @@ export default {
             showApikeyTitleBox: false,
             showInput: true,
             modeName: '',
-            userName: 'tom',
+            userName: '张三',
             apiKey: '',
             leftMenuWidth: '260px',
             menuHideFlag: false,
@@ -618,7 +622,7 @@ export default {
     overflow: hidden;
     text-overflow: ellipsis;
     width: 230px;
-    padding: 10px 10px;
+    padding: 0 10px;
 }
 
 .chat-title-name:hover {
@@ -632,7 +636,7 @@ export default {
     text-overflow: ellipsis;
     width: 230px;
     /* border: 1px solid; */
-    padding: 10px 10px;
+    padding: 0 10px;
     border-radius: 30px;
     background-color: #373939;
 }
@@ -648,7 +652,7 @@ export default {
     text-overflow: ellipsis;
     width: 230px;
     /* border: 1px solid; */
-    padding: 10px 10px;
+    padding: 0 10px;
     border-radius: 30px;
     background-color: #16456b !important;
 }
@@ -804,6 +808,7 @@ export default {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    padding: 10px 0;
 }
 .chat-title-input {
     width: 160px;
@@ -828,5 +833,8 @@ export default {
     display: flex;
     font-size: 80px;
     color: #2e2e2e;
+}
+.chat-oper {
+    padding: 10px 0;
 }
 </style>.
